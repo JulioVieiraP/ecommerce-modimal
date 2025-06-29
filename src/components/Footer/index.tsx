@@ -3,8 +3,10 @@ import {
   FaFacebook,
   FaPinterest,
   FaTiktok,
-  FaRegCopyright
+  FaRegCopyright,
+  FaLongArrowAltRight
 } from 'react-icons/fa'
+import { LuArrowRight } from 'react-icons/lu'
 import { FaRegMessage } from 'react-icons/fa6'
 
 const Footer = () => {
@@ -17,22 +19,33 @@ const Footer = () => {
               Join Our Club, Get 15% Off For Your Birthday
             </h4>
             <form className="mt-4">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter Your Email Address"
-                required
-                className="mb-2"
-              />
-              <button type="submit" aria-label="Subscribe">
-                →
-              </button>
-              <div className="flex items-center gap-2 mt-2">
-                <input type="checkbox" id="consent" name="consent" />
+              <div
+                className="flex items-center justify-between px-4 py-2 bg-[#404040] text-white"
+                style={{ border: '1px solid #D6D6D6' }}
+              >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter Your Email Address"
+                  required
+                  className="bg-transparent outline-none border-none flex-grow text-sm placeholder-[#D6D6D6]"
+                />
+                <button type="submit" className="ml-2">
+                  <LuArrowRight size={20} />
+                </button>
+              </div>
+
+              <div className="flex items-start gap-2 mt-2">
+                <input
+                  type="checkbox"
+                  id="consent"
+                  name="consent"
+                  className="mt-1"
+                />
                 <label
                   htmlFor="consent"
-                  className="text-[10px] font-normal leading-tight break-words"
+                  className="text-[10px] font-normal leading-tight break-words text-[#cbcbcb]"
                 >
                   By submitting your email, you agree to receive advertising
                   emails from Modimal.
@@ -129,7 +142,7 @@ const Footer = () => {
           </ul>
 
           <button
-            className="bg-[#1f231e] text-white px-4 py-2 w-14 h-12 flex items-center justify-center align-center"
+            className="bg-[#5A6D57] text-white px-4 py-2 w-14 h-12 flex items-center justify-center align-center"
             style={{ border: '1px solid white' }}
           >
             <FaRegMessage size={20} />
